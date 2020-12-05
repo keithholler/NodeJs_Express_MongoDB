@@ -34,7 +34,7 @@ campsiteRouter
     authenticate.verifyUser,
     authenticate.verifyAdmin,
     (req, res, next) => {
-      Camspite.deleteMany()
+      Campsite.deleteMany()
         .then((response) => {
           res.statusCode = 200;
           res.setHeader("Contetnt-Type", "application/json");
@@ -44,7 +44,7 @@ campsiteRouter
     }
   );
 
-//CamspiteId
+//CampsiteId
 campsiteRouter
   .route("/:campsiteId")
   .get((req, res, next) => {
